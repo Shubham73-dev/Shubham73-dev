@@ -29,7 +29,6 @@
         position: absolute;
         top: 83%;
         text-align: center;
-        /* z-index: -1; */
         background-color: rgba(0, 0, 0, 0.7);
         display: none;
     }
@@ -46,7 +45,6 @@
         align-items: center;
         justify-content: center;
         width: 71%;
-        /* margin-left: 2%; */
     }
     .logo span{
         text-transform: uppercase;
@@ -67,7 +65,6 @@
         font-size: 2.5rem;
     }
     .ham-menu{
-      /* text-align: -webkit-center; */
         width:50% ;
         display: flex;
         justify-content: flex-end;
@@ -76,11 +73,10 @@
     .sec-1{
         position: relative;
         height: 75vw;
-        /* border: 1px solid black; */
         background-image: url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZmVzc2lvbmFsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
         background-size:100% 100% ;
         background-repeat: no-repeat;
-        
+        /* background-attachment: fixed; */
     }
     .cover{
         height: inherit;
@@ -98,20 +94,59 @@
         font-size: 0.7em;
         color: #ffd900;
         margin-bottom: 2%;
+        transform: translateX(-100%);
+        transition-duration: 1s;
+        opacity: 0;
     }
     .intro h3{
         font-size: 0.7em;
         font-weight: 900;
         margin-bottom: 2%;
+        transform: translateX(-100%);
+        transition-duration: 1.5s;
+        opacity: 0;
     }
     .intro h1{
         font-size: 1.8rem;
         font-weight: bold;
         margin-bottom: 2%;
+        position: relative;
+        color: rgba(0, 0, 0, 0.5);
+        -webkit-text-stroke: 0.01em white;
+    }
+    .intro h1::before{
+        content: "i'm a ui developer...";
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke:0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    white-space: nowrap;
+
+    }
+    @keyframes animate{
+        0%,10%,100%{
+            width: 0;
+        }
+        70%,90%{
+            width: 100%;
+        }
     }
     .btns{
-        
-        display: flex;
+        display: flex;   
+    }
+    .btns a{
+        text-decoration: none;
+        margin-right: 3%;
+    }
+    #div-btn{
+        transition-duration: 1.3s;
+        transform: translateX(-100%);
     }
     .btn{
         height: 2rem;
@@ -131,16 +166,16 @@
         background-color: white;
         color:#007BFF ;
 }
+
+
 /* section-2 */
 .sec-2{
     height: inherit;
-    /* border-bottom: 1px solid black; */
     margin-bottom: 10%;
 }
 .abt-heading{
     text-align: center;
     padding-top: 6%;
-    /* border-bottom: 0.5px solid red; */
     margin-bottom: -10%;
 }
 .abt-heading h2{
@@ -178,8 +213,70 @@
     color: #4f4f50;
     margin-bottom: 5px;
 }
+.html{
+    width: 85%;
+    animation: html 2s linear 1;
+}
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+.jq{
+    width: 45%;
+    animation: jq 2s linear 1;
+}
+@keyframes jq{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+.css{
+    width: 85%;
+    animation: css 2s linear 1;
+}
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 85%;
+    }
+}
+.js{
+    width: 60%;
+    animation: js 2s linear 1;
+}
+.php{
+    width:30% ;
+    animation: php 2s linear 1;
+}
+
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes php{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 30%;
+    }
+}
+
+/* section-3 */
 .sec-3{
-    /* height: 120vw; */
     background-image: url('https://demo.w3layouts.com/demos_new/template_demo/30-10-2018/recognize_demo_Free/1686477365/web/images/serve.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -201,15 +298,33 @@
     font-size: 36px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    /* margin-bottom: 80px; */
     text-shadow: 2px 2px 2px rgb(41 41 41 / 15%);
     color: white;
+}
+#serv-1{
+    color: white;
+    background-color:#007BFF ;
+    border: 2px solid white;
+}
+#serv-2{
+    color: white;
+    background-color:#007BFF ;
+}
+#row-1{
+    display: flex;
+    flex-direction: column;
+}
+#row-2{
+    flex-direction: column;
+    display: none;
 }
 .card{
     text-align: center;
     margin: 6% 0;
     padding: 4% 0;
     background-color: rgba(243, 244, 245, 0.2);
+    transition-duration: 1s;
+    transform: rotateX(90deg);
 }
 .card i{
     font-size: 2rem;
@@ -228,9 +343,9 @@
     font-size: 0.8em;
     letter-spacing: 2px;
 }
+
 /* section-4 */
 .sec-4{
-    /* height: 100vh; */
     height: inherit;
     background-image: url('https://demo.w3layouts.com/demos_new/template_demo/30-10-2018/recognize_demo_Free/1686477365/web/images/exp.jpg');
     background-size: 100% 100%;
@@ -250,7 +365,6 @@
 .ex-headings h3{
     font-size: 1.8em;
     text-shadow: 2px 2px 2px rgb(41 41 41 / 15%);
-    /* font-size: 2.5em; */
     color: #333338;
     font-weight: 700;
     text-transform: uppercase;
@@ -260,8 +374,6 @@
     justify-content: center;
     padding: 6%;
     position: relative;
-    /* width: 85%;
-    margin: 0 auto; */
 }
 .vr{
     height: 28rem;
@@ -284,7 +396,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
 }
 .hr{
     width: 3rem;
@@ -297,7 +408,6 @@
     transform-origin: left;
     display: flex;
     align-items: center;
-    /* position: relative; */
 }
 .float h3{
     font-size: 1em;
@@ -321,7 +431,6 @@
 .rot{
     transform: rotateY(180deg);
     width: 2rem;
-    /* position: relative; */
 }
 .float{
     position: absolute;
@@ -333,15 +442,12 @@
     text-align: right;
 }
 .float-lt{
-    /* left: 10%; */
 }
 .float-lm{
     top: 43%;
-    /* left: 10%; */
 }
 .float-lb{
     bottom: 0%;
-    /* left: 10%; */
 }
 .right{
     right: 5%;
@@ -353,7 +459,6 @@
 }
 .float-rb{
     bottom: 18%;
-    /* right: 5%; */
 }
 
 /* section-5 */
@@ -382,7 +487,6 @@
     background-image: url('https://demo.w3layouts.com/demos_new/template_demo/30-10-2018/recognize_demo_Free/1686477365/web/images/contact.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    /* height: 112vw; */
     padding: 5%;
     height: inherit;
 }
@@ -444,8 +548,37 @@
         margin: 0 auto;
         margin-top: 4%;
     }
+    .to-top{
+        background: black;
+        position: fixed;
+        bottom: 16px;
+        right: 8%;
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: #1f1f1f;
+        text-decoration: none;
+        pointer-events: none;
+        transition: all 0.4s;
+        opacity: 0;
+        border: 4px solid white;
+        border-radius: 30%;
+    
+    }
+    .to-top i{
+        font-size: 1rem;
+        color: white;
+    }
+    .to-top.active{
+        bottom:32px;
+        pointer-events: auto;
+        opacity: 1;
+    }
 }
-/* .......................................................................................................................................... */
+/* @media(min-width:575px) */
 @media(min-width:575px){
     .intro h4{
         font-size: 1.2rem;
@@ -455,7 +588,6 @@
     }
     .intro h1{
         font-size: 3rem;
-        /* margin-bottom: 5%; */
     }
     .container_card{
         width: 86%;
@@ -465,25 +597,24 @@
         margin-right: 2%;
     }
 }
-/* ........................................................................................................................................... */
+/* @media(min-width:768px) */
 @media(min-width:768px){
+    header{
+        /* padding-bottom: 0; */
+    }
     .header-row{
         flex-direction: column;
     }
     .ham-menu{
         width: 100%;
-        /* margin: 0 auto; */
     }
     #ham-cir{
         display: none;
     }
     .ham-menu ul{
         display: flex;
-        /* width: 100%; */
         justify-content: space-around;
         align-items: center;
-        /* width: 100%; */
-        /* margin: 0 auto; */
         position: inherit;
         background-color: transparent;
     }
@@ -546,7 +677,7 @@
         width: 100%;
     }
 }
-/* ........................................................................................................................................... */
+/* @media(min-width:992px) */
 @media(min-width:992px){
     .intro h1{
         font-size: 4rem;
@@ -561,6 +692,18 @@
     }
     .col{
         width: 90%;
+    }
+    #row-1{
+        display: flex;
+        /* position: relative; */
+        flex-direction: row;
+    }
+    #row-2{
+        /* display: flex; */
+        flex-direction: row;
+        /* position: absolute; */
+        /* top: 0%; */
+        display: none;
     }
     .row-card{
         display: flex;
@@ -580,7 +723,6 @@
     .ex-headings h3{
         font-size: 2.5em;
     }
-    /* timeline-horizontal-display */
     .timeline_container{
         width: 100%;
         height: inherit;
@@ -637,7 +779,6 @@
     }
     .img{
         width: 48%;
-        /* margin-right: 1%; */
     }
     .sec-5{
         padding-bottom: 0%;
@@ -656,9 +797,14 @@
         width: 55%;
         margin: 0 auto;
     }
+    .to-top{
+        width: 2rem;
+        height: 2rem;
+        right: 2%;
+    }
     
 }
-/* ............................................................................................................................................ */
+/* @media(min-width:1200px) */
 @media(min-width:1200px){
     .header-row{
         display: flex;
@@ -691,9 +837,6 @@
         height: 4rem;
         width: 4rem;
     }
-    /* .circle i{
-        font-size: 4.5rem;
-    } */
     .sec-1{
         height: 50vw;
     }
@@ -720,7 +863,6 @@
     .ser-heading{
         margin-bottom: 2%;
     }
-    /* timeline */
     .vr{
         width: 54rem;
     }
@@ -733,8 +875,6 @@
     }
     .float-lm{
         top: -28%;
-        /* left: -33%; */
-
     }
     .float-rt{
         top: 75%;
@@ -753,8 +893,16 @@
         width: 90%;
         margin: 0 auto;
     }
+    .to-top{
+        height: 2.5rem;
+        width: 2.5rem;
+        right: 5%;
+    }
+    .to-top i{
+        font-size: 1.5rem;
+    }
 }
-/* ........................................................................................................................................... */
+/* @media(min-width:1350px) */
 @media(min-width:1350px){
     .timeline_container{
         width: 85%;
@@ -764,7 +912,7 @@
         font-weight: bolder;
     }
 }
-/* ........................................................................................................................................... */
+/* @media(min-width:1400px) */
 @media(min-width:1400px){
     .float-lt{
         top:-30% ;

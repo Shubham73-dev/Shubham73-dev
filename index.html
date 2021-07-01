@@ -14,9 +14,11 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="assets/stylesheets/main.css">
+    <script src="assets/javascripts/main.js"></script>
 </head>
 
 <body>
+    <!-- header -->
     <header>
         <div class="header-container">
             <div class="header-row">
@@ -28,17 +30,18 @@
                 </div>
                 <div class="ham-menu">
                     <div class="circle" id="ham-cir" style="margin-right: 8%;">
-                        <i class="fas fa-bars" style="font-size: 2rem;"></i>
-                        <i class="fas fa-times" style="display: none;"></i>
+                        <i class="fas fa-bars" id="ham-bar" style="font-size: 2rem;"></i>
+                        <i class="fas fa-times" id="cross" style="display: none;"></i>
 
                     </div>
-                    <ul>
+                    <ul id="popup">
                         <li><a href="#">home</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">services</a></li>
-                        <li><a href="#">projects</a></li>
-                        <li><a href="#">contact</a></li>
-                        <li><a href="#">download</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#projects">projects</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <li><a href="https://drive.google.com/file/d/11vAiO8UaY4y2FVNXZD9D7cglvoOanIc4/view?usp=sharing"
+                                target="_blank">download</a></li>
                     </ul>
                 </div>
 
@@ -49,92 +52,134 @@
     <section class="sec-1">
         <div class="cover"></div>
         <div class="intro">
-            <h4>introduction</h4>
-            <h3>hello, my name is shubham shrivastav</h3>
-            <h1>i'm a ui developer</h1>
-            <div class="btns">
-                <div class="btn btn-1">my work</div>
-                <div class="btn btn-2">hire me</div>
+            <h4 id="head-trans">introduction</h4>
+            <h3 id="head3-trans">hello, my name is shubham shrivastav</h3>
+            <h1>i'm a ui developer...</h1>
+            <div class="btns" id="div-btn">
+                <a href="#projects">
+                    <div class="btn btn-1">my work</div>
+                </a>
+                <a href="#contact">
+                    <div class="btn btn-2">hire me</div>
+                </a>
             </div>
         </div>
     </section>
-    <section class="sec-2">
+    <!-- section-2 -->
+    <section class="sec-2" id="about">
         <div class="abt-heading">
             <h2>about me</h2>
             <h5>welcome to my website</h5>
         </div>
-        <!-- progress bar -->
+
         <div class="container">
             <div class="pro-row">
 
-                <div class="col html">
+                <div class="col">
                     <h5>html</h5>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                        <div class="progress-bar progress-bar-striped progress-bar-animated html" role="progressbar"
                             aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
                     </div>
                 </div>
-                <div class="col css">
+                <div class="col">
                     <h5>css</h5>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success css"
                             role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
                             style="width: 85%"></div>
                     </div>
                 </div>
-                <div class="col js">
+                <div class="col">
                     <h5>javaScript</h5>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger js"
                             role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
                             style="width: 60%"></div>
                     </div>
                 </div>
-                <div class="col jq">
+                <div class="col">
                     <h5>jquery</h5>
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning jq"
                             role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
                             style="width: 45%"></div>
                     </div>
                 </div>
-
+                <div class="col">
+                    <h5>PHP</h5>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-info php"
+                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 30%"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h5>MYSQL</h5>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark php"
+                            role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+                            style="width: 30%"></div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
-    <section class="sec-3">
+    <!-- section-3 -->
+    <section class="sec-3" id="services">
         <div class="ser-heading">
             <h5>my services</h5>
             <h2>what i do</h2>
         </div>
         <div class="btns center">
-            <div class="btn btn-1">service 1</div>
-            <div class="btn btn-2">service 2</div>
+            <div class="btn btn-1" id="serv-1">service 1</div>
+            <div class="btn btn-2" id="serv-2">service 2</div>
         </div>
         <div class="container_card">
-            <div class="row-card">
-                <div class="card card-1">
+            <div class="row-card" id="row-1">
+                <div class="card">
                     <i class="fas fa-magic"></i>
                     <h4>web development</h4>
-                    <p>Can Create a website or webpage using Django Framework with Python as Backend and Fully
+                    <p>Can Create a website or webpage with HTML5 and css3 with innovative and Fully
                         responsive webpage with attractive features by using Bootstrap and Jquery Plugins.</p>
                 </div>
-                <div class="card card-2">
+                <div class="card">
                     <i class="far fa-lightbulb"></i>
                     <h4>creative ideas</h4>
                     <p>I am flexible to any kind of situation,Have Positive Attitude , Have innovative thinking and
                         strong logical reasoning to create a logic for any type of requirement.</p>
                 </div>
-                <div class="card card-3">
+                <div class="card">
                     <i class="fas fa-list"></i>
                     <h4>PROFESSIONAL CODE</h4>
                     <p>I create a web page by following all the W3C Rules and Validations. Also know many shortcuts for
                         faster output and for code efficiency.</p>
                 </div>
+
             </div>
+            <div class="row-card" id="row-2">
+                <div class="card">
+                    <i class="fas fa-heart"></i>
+                    <h4>USER FRIENDLY</h4>
+                    <p>I create projects which are accessible to all users with well planned architecture, well formatted content which is easy to scan or understand.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-user-friends"></i>
+                    <h4>TEAM PLAYER</h4>
+                    <p>I am flexible with everyone and have good skills of working as a team.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-globe-europe"></i>
+                    <h4>MOVE WITH TECHNOLOGY</h4>
+                    <p>I am a fast learner and have a positive attitude of learning new skills as everyday new technologies are evolving and so are the skills.</p>
+                </div>
+            </div>
+
+
         </div>
     </section>
+    <!-- section-4 -->
     <section class="sec-4">
         <div class="ex-headings">
             <h4>experience</h4>
@@ -170,7 +215,7 @@
                 </div>
             </div>
             <div class="float float-lt left">
-                <h3>AUG 2014 <span>-</span> <br> MAY 2021</h1>
+                <h3>AUG 2014 <span>-</span> <br> MAY 2018</h1>
                     <h4>lovely professional university</h2>
                         <h5>btech (electronics and communication) <br>6.02 c.g.p.a
                 </h3>
@@ -187,7 +232,7 @@
                         <h5>12th education(69.2%)
                 </h3>
             </div>
-            <!-- float-right -->
+
             <div class="float float-rt right">
                 <h3>MAY 2017- JULY 2017</h1>
                     <h4>telcocrats telecommunica <br> tion pvt. ltd.</h2>
@@ -195,39 +240,46 @@
                 </h3>
             </div>
             <div class="float float-rb right">
-                <h3>JAN 2021 - APR 2021</h1>
+                <h3>JAN 2019 - APR 2019</h1>
                     <h4>BRAIN MENTORS PVT. LTD.</h2>
                         <h5>UI TRAINING
                 </h3>
             </div>
         </div>
     </section>
-    <section class="sec-5">
+    <!-- section-5 -->
+    <section class="sec-5" id="projects">
         <h1>my projects</h1>
         <div class="pro_container">
             <div class="row-pro">
                 <div class="img">
-                    <a href="#"><img src="assets/images/audi.png" alt=""></a>
+                    <a href="https://github.com/Shubham73-dev/shubham73-dev.github.io-audi_web_cloning-"
+                        target="_blank"><img src="assets/images/audi.png" alt=""></a>
                 </div>
                 <div class="img">
-                    <a href="#"><img src="assets/images/calci.png" alt=""></a>
+                    <a href="https://github.com/Shubham73-dev/shubham73-dev-mycalci.github.io" target="_blank"><img
+                            src="assets/images/calci.png" alt=""></a>
                 </div>
                 <div class="img">
-                    <a href="#"><img src="assets/images/catering.png" alt=""></a>
+                    <a href="https://github.com/Shubham73-dev/shubham73-dev-catering.github.io" target="_blank"><img
+                            src="assets/images/catering.png" alt=""></a>
                 </div>
-                <div class="img">
+                <div class="img img-d">
                     <a href="#"><img src="assets/images/e-com.png" alt=""></a>
                 </div>
-                <div class="img">
-                    <a href="#"><img src="assets/images/musicapp.png" alt=""></a>
+                <div class="img img-d">
+                    <a href="https://github.com/Shubham73-dev/shubham73-devmymusicapp.github.io/" target="_blank"><img
+                            src="assets/images/musicapp.png" alt=""></a>
                 </div>
-                <div class="img">
+                <div class="img img-d">
                     <a href="#"><img src="assets/images/recognize.png" alt=""></a>
                 </div>
             </div>
+           
         </div>
     </section>
-    <section class="sec-6">
+    <!-- section-6 -->
+    <section class="sec-6" id="contact">
         <div class="cont-heading">
             <h4>find me</h4>
             <h3>contact me now</h3>
@@ -249,20 +301,23 @@
                     <h6>phone</h6>
                     <p>+91-7814587230 / +91-8264445067</p>
                 </div>
+
+
+
             </div>
         </div>
     </section>
+    <!-- footer -->
     <footer>
         <div class="footer_container">
             <div class="footer_row">
                 <ul>
                     <li><a href="#">home</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">contact me</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#services">services</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact me</a></li>
                 </ul>
-                <!-- logo -->
                 <div class="logo bottom">
                     <div class="circle" style="margin-right: 2%;">
                         <i class="fas fa-crosshairs"></i>
@@ -272,8 +327,12 @@
             </div>
             <hr>
         </div>
-        
+
     </footer>
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
 </body>
 
 </html>
