@@ -95,7 +95,7 @@
         color: #ffd900;
         margin-bottom: 2%;
         transform: translateX(-100%);
-        transition-duration: 1s;
+        transition-duration: 0.5s;
         opacity: 0;
     }
     .intro h3{
@@ -103,7 +103,7 @@
         font-weight: 900;
         margin-bottom: 2%;
         transform: translateX(-100%);
-        transition-duration: 1.5s;
+        transition-duration: 0.5s;
         opacity: 0;
     }
     .intro h1{
@@ -226,7 +226,7 @@
     }
 }
 .jq{
-    width: 45%;
+    width: 75%;
     animation: jq 2s linear 1;
 }
 @keyframes jq{
@@ -234,7 +234,7 @@
         width: 0%;
     }
     100%{
-        width: 45%;
+        width: 75%;
     }
 }
 .css{
@@ -250,7 +250,7 @@
     }
 }
 .js{
-    width: 60%;
+    width: 75%;
     animation: js 2s linear 1;
 }
 .php{
@@ -263,7 +263,7 @@
         width: 0%;
     }
     100%{
-        width: 60%;
+        width: 75%;
     }
 }
 @keyframes php{
@@ -484,7 +484,7 @@
 }
 /* section-6 */
 .sec-6{
-    background-image: url('https://demo.w3layouts.com/demos_new/template_demo/30-10-2018/recognize_demo_Free/1686477365/web/images/contact.jpg');
+    background-image: url('../images/contact.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 5%;
@@ -505,6 +505,8 @@
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 12%;
+    transition-duration: 0.5s;
+    transform: scale(0);
 }
 .icon span{
     text-transform: lowercase;
@@ -564,7 +566,7 @@
         pointer-events: none;
         transition: all 0.4s;
         opacity: 0;
-        border: 4px solid white;
+        border: 4px solid #ff0000;
         border-radius: 30%;
     
     }
@@ -929,4 +931,7 @@
     .cont-heading{
         margin-bottom: 8%;
     }
+}
+.img img{
+    box-shadow: 10px 10px 10px 0 gray;
 }
