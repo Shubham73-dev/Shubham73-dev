@@ -38,7 +38,7 @@ function initEvents() {
     document.getElementById("div-btn").style.transform = "translatex(0%)";
 
     document.getElementById("serv-1").onclick = function () {
-        
+
         document.getElementById("serv-1").style.border = "2px solid white";
         document.getElementById("serv-2").style.border = "none";
         document.getElementById("row-2").style.display = "none";
@@ -47,7 +47,7 @@ function initEvents() {
     document.getElementById("serv-2").onclick = function () {
         document.getElementById("serv-2").style.border = "2px solid white";
         document.getElementById("serv-1").style.border = "none";
-        
+
         document.getElementById("row-1").style.display = "none";
         document.getElementById("row-2").style.display = "block";
     }
@@ -55,7 +55,7 @@ function initEvents() {
     function myFunction(y) {
         if (y.matches) {
             document.getElementById("serv-1").onclick = function () {
-        
+
                 document.getElementById("serv-1").style.border = "2px solid white";
                 document.getElementById("serv-2").style.border = "none";
                 document.getElementById("row-2").style.display = "none";
@@ -64,7 +64,7 @@ function initEvents() {
             document.getElementById("serv-2").onclick = function () {
                 document.getElementById("serv-2").style.border = "2px solid white";
                 document.getElementById("serv-1").style.border = "none";
-                
+
                 document.getElementById("row-1").style.display = "none";
                 document.getElementById("row-2").style.display = "flex";
             }
@@ -73,25 +73,42 @@ function initEvents() {
     var y = window.matchMedia("(min-width: 992px)")
     myFunction(y)
     y.addListener(myFunction)
-    
-//   trial
-window.addEventListener("scroll", getScrollPos);
-        var a = document.querySelectorAll(".card");
-        // var img = document.querySelector("#img");
-        function getScrollPos() {
-            var scroll_y = window.scrollY;
-            for(var i = 0; i < a.length; i++) {
-                var section_offset_y = a[i].offsetTop;
-                // console.log(section_offset_y - scrollY);
-                var pos = section_offset_y - scrollY;
-                if(pos <= 500) {
-                    a[i].style.transform= "rotatex(0deg)";
-                }
-                else{
-                    a[i].style.transform= "rotatex(90deg)"; 
-                }
-            }
-        }
 
-       
+    //   trial
+    window.addEventListener("scroll", getScrollPos);
+    var a = document.querySelectorAll(".card");
+    // var img = document.querySelector("#img");
+    function getScrollPos() {
+        var scroll_y = window.scrollY;
+        for (var i = 0; i < a.length; i++) {
+            var section_offset_y = a[i].offsetTop;
+            // console.log(section_offset_y - scrollY);
+            var pos = section_offset_y - scrollY;
+            if (pos <= 500) {
+                a[i].style.transform = "rotatex(0deg)";
+            }
+            // else{
+            //     a[i].style.transform= "rotatex(90deg)"; 
+            // }
+        }
     }
+
+    window.addEventListener("scroll", getScaleIcon);
+    var b = document.querySelectorAll(".icon");
+    // var img = document.querySelector("#img");
+    function getScaleIcon() {
+        var scroll_z = window.scrollY;
+        for (var j = 0; j < b.length; j++) {
+            var section_offset_y = b[j].offsetTop;
+            // console.log(section_offset_y - scrollY);
+            var position = section_offset_y - scrollY;
+            if (position <= 500) {
+                b[j].style.transform = "scale(1)";
+            }
+            // else{
+            //     a[i].style.transform= "rotatex(90deg)"; 
+            // }
+        }
+    }
+
+}
